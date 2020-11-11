@@ -1,0 +1,2 @@
+KERNEL=="event*", SUBSYSTEM=="input", ATTRS{idVendor}=="044f", ATTRS{idProduct}=="b315", SYMLINK+="input/thrustmaster", ACTION=="add", RUN+="/bin/systemctl start thrustmaster"
+KERNEL=="event*", SUBSYSTEM=="input", ATTRS{idVendor}=="044f", ATTRS{idProduct}=="b315", ACTION=="remove", RUN+="/bin/systemctl stop thrustmaster"
